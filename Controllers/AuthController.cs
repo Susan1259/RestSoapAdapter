@@ -24,31 +24,17 @@ namespace MyApplication.Controllers
             new User
             {
                 Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test",
-                Roles = new List<string>()
-                {
-                    "Admin"
-                }
+                Role = "Admin"
             },
             new User
             {
                 Id = 2, FirstName = "Test2", LastName = "User2", Username = "test2", Password = "test2",
-                Roles = new List<string>()
-                {
-                    "User"
-                }
+                Role = "User"
             },
             new User
             {
                 Id = 3, FirstName = "Test3", LastName = "User3", Username = "test3", Password = "test3",
-                Roles = new List<string>()
-                {
-                    "User",
-                    "Admin"
-                }
-            },
-            new User
-            {
-                Id = 4, FirstName = "Test4", LastName = "User4", Username = "test4", Password = "test4"
+                Role = "User2"
             }
         };
 
@@ -74,7 +60,6 @@ namespace MyApplication.Controllers
 
         private string GenerateJwtToken(User user)
         {
-            // generate token that is valid for 7 days
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_configuration["Jwt:SigningKey"]);
 
@@ -82,18 +67,14 @@ namespace MyApplication.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.FirstName),
+                new Claim(ClaimTypes.Role, user.Role )
             };
-
-            if (user.Roles.Count > 0)
-            {
-                claims.AddRange(user.Roles.Select(role => new Claim(ClaimTypes.Role, role)));
-            }
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Issuer = "example.com",
-                Audience = "example.com",
+                Issuer = _configuration["Jwt:Issuer"],
+                Audience = _configuration["Jwt:Audience"],
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
@@ -111,6 +92,6 @@ namespace MyApplication.Controllers
         public string Username { get; set; }
         public string Password { get; set; }
 
-        public List<string> Roles { get; set; } = new();
+        public string Role { get; set; }
     }
 }

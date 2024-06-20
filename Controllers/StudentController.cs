@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyApplication.Models;
 
 namespace MyApplication.Controllers
@@ -12,12 +13,14 @@ namespace MyApplication.Controllers
         
 
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public List<Student> GetAll()
         {
             return _students;
         }
 
         [HttpPost]
+        [Authorize(Roles = "User")]
         public Student CreateStudent(Student student)
         {
             _students.Add(student);
@@ -25,6 +28,7 @@ namespace MyApplication.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "User2")]
         public Student UpdateStudent(int id, Student newstudent)
         {
             var student = _students.FirstOrDefault(s=>s.ID == id);
@@ -33,7 +37,8 @@ namespace MyApplication.Controllers
         }
 
         [HttpDelete]
-        public Student DelteStudent(int id)
+        [Authorize(Roles = "User2")]
+        public Student DeleteStudent(int id)
         {
             var student = _students.FirstOrDefault(s => s.ID == id);
             _students.Remove(student);

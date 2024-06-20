@@ -741,11 +741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\MyApplication\\MyApplication.csproj",
+      "projectUniqueName": "C:\\Github_Project\\MyApplication.csproj",
       "projectName": "MyApplication",
-      "projectPath": "C:\\Users\\Asus\\source\\repos\\MyApplication\\MyApplication.csproj",
+      "projectPath": "C:\\Github_Project\\MyApplication.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\source\\repos\\MyApplication\\obj\\",
+      "outputPath": "C:\\Github_Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
