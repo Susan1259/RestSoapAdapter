@@ -13,14 +13,14 @@ namespace MyApplication.Controllers
         
 
         [HttpGet]
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Get, Admin")]
         public List<Student> GetAll()
         {
             return _students;
         }
 
         [HttpPost]
-        [Authorize(Roles = "User, Admin")]
+        [Authorize(Roles = "Create")]
         public Student CreateStudent(Student student)
         {
             _students.Add(student);
@@ -28,7 +28,7 @@ namespace MyApplication.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles = "User, Admin")]
+        [Authorize(Roles = "Update, Admin")]
         public Student UpdateStudent(int id, Student newstudent)
         {
             var student = _students.FirstOrDefault(s=>s.ID == id);
@@ -37,7 +37,7 @@ namespace MyApplication.Controllers
         }
 
         [HttpDelete]
-        [Authorize(Roles = "User2, Admin")]
+        [Authorize(Roles = "Delete")]
         public Student DeleteStudent(int id)
         {
             var student = _students.FirstOrDefault(s => s.ID == id);

@@ -24,17 +24,30 @@ namespace MyApplication.Controllers
             new User
             {
                 Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test",
-                Role = "Admin"
+                Roles = new List<string>(){
+                    "Create",
+                    "Update",
+                    "Admin",
+                    "Delete"
+                }
             },
             new User
             {
                 Id = 2, FirstName = "Test2", LastName = "User2", Username = "test2", Password = "test2",
-                Role = "User"
+                Roles = new List < string >() 
+                {
+                    "Create",
+                    "Get"
+                   
+                }
             },
             new User
             {
                 Id = 3, FirstName = "Test3", LastName = "User3", Username = "test3", Password = "test3",
-                Role = "User2"
+                Roles = new List < string >() 
+                { 
+                    "Delete"
+                }
             }
         };
 
@@ -67,9 +80,9 @@ namespace MyApplication.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.FirstName),
-                new Claim(ClaimTypes.Role, user.Role )
+                
             };
-
+            claims.AddRange(user.Roles.Select(role => new Claim(ClaimTypes.Role, role)));
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
@@ -92,6 +105,6 @@ namespace MyApplication.Controllers
         public string Username { get; set; }
         public string Password { get; set; }
 
-        public string Role { get; set; }
+        public List<string> Roles = new();
     }
 }
