@@ -20,7 +20,7 @@ namespace MyApplication.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User, Admin")]
         public Student CreateStudent(Student student)
         {
             _students.Add(student);
@@ -28,7 +28,7 @@ namespace MyApplication.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles = "User2")]
+        [Authorize(Roles = "User, Admin")]
         public Student UpdateStudent(int id, Student newstudent)
         {
             var student = _students.FirstOrDefault(s=>s.ID == id);
@@ -37,7 +37,7 @@ namespace MyApplication.Controllers
         }
 
         [HttpDelete]
-        [Authorize(Roles = "User2")]
+        [Authorize(Roles = "User2, Admin")]
         public Student DeleteStudent(int id)
         {
             var student = _students.FirstOrDefault(s => s.ID == id);
