@@ -8,41 +8,61 @@ namespace MyApplication.Controllers
     [ApiController]
     public class StudentController : Controller
     {
-        private static List<Student> _students = new List<Student>();
+        private readonly SampleDBContext _context;
 
-        
+        public StudentController(SampleDBContext context)
+        {
+            _context = context;
+        }
 
+        // GET: api/Student/GetAll
         [HttpGet]
-        [Authorize(Roles ="Get, Admin")]
-        public List<Student> GetAll()
+        [Authorize(Roles = "Get, Admin")]
+        public ActionResult<IEnumerable<Student>> GetAll()
         {
-            return _students;
+            return _context.Student.ToList();
         }
 
+        // POST: api/Student/CreateStudent
         [HttpPost]
-        [Authorize(Roles = "Create")]
-        public Student CreateStudent(Student student)
+        [Authorize(Roles = "Create,Admin")]
+        public ActionResult<Student> CreateStudent(Student student)
         {
-            _students.Add(student);
+            _context.Student.Add(student);
+            _context.SaveChanges();
             return student;
         }
 
-        [HttpPut]
+        // PUT: api/Student/UpdateStudent/5
+        [HttpPut("{id}")]
         [Authorize(Roles = "Update, Admin")]
-        public Student UpdateStudent(int id, Student newstudent)
+        public IActionResult UpdateStudent(int id, Student newstudent)
         {
-            var student = _students.FirstOrDefault(s=>s.ID == id);
+            var student = _context.Student.FirstOrDefault(s => s.ID == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+
             student.Name = newstudent.Name;
-            return newstudent;
+            _context.SaveChanges();
+            return Ok(student);
         }
 
-        [HttpDelete]
-        [Authorize(Roles = "Delete")]
-        public Student DeleteStudent(int id)
+        // DELETE: api/Student/DeleteStudent/5
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "Delete,Admin")]
+        public IActionResult DeleteStudent(int id)
         {
-            var student = _students.FirstOrDefault(s => s.ID == id);
-            _students.Remove(student);
-            return student;
+            var student = _context.Student.FirstOrDefault(s => s.ID == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+
+            _context.Student.Remove(student);
+            _context.SaveChanges();
+            return Ok(student);
         }
     }
 }

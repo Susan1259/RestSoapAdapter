@@ -1,33 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Github_Project\\",
+  "WorkspaceRootPath": "C:\\Projects\\RestSoapAdapter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\github_project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\migrations\\20240624135642_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:migrations\\20240624135642_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\github_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\github_project\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\github_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\github_project\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\github_project\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\models\\sampledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:models\\sampledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\github_project\\models\\loginresultmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|c:\\projects\\restsoapadapter\\models\\loginresultmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4108B7AD-6CA9-4625-812E-038349FAC07B}|MyApplication.csproj|solutionrelative:models\\loginresultmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,92 +46,125 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Github_Project\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Github_Project\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAowEEAAAAkAAAA",
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Student.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Models\\Student.cs",
+              "RelativeToolTip": "Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T20:57:15.391Z"
+              "WhenOpened": "2024-06-20T20:19:16.352Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240624135642_init.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Migrations\\20240624135642_init.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240624135642_init.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Migrations\\20240624135642_init.cs",
+              "RelativeToolTip": "Migrations\\20240624135642_init.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T13:56:43.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SampleDBContext.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Models\\SampleDBContext.cs",
+              "RelativeDocumentMoniker": "Models\\SampleDBContext.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Models\\SampleDBContext.cs",
+              "RelativeToolTip": "Models\\SampleDBContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T12:46:55.726Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Github_Project\\Controllers\\StudentController.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Github_Project\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Controllers\\StudentController.cs",
               "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAA8AAAAfAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T20:38:43.505Z"
+              "WhenOpened": "2024-06-20T20:38:43.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Github_Project\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Github_Project\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB4AAAAbAAAA",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-20T21:25:56.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T20:19:25.414Z",
+              "WhenOpened": "2024-06-20T20:57:15.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginResultModel.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Models\\LoginResultModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginResultModel.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Models\\LoginResultModel.cs",
+              "RelativeToolTip": "Models\\LoginResultModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T20:19:11.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginModel.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T20:19:04.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Github_Project\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Github_Project\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-20T21:25:56.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Github_Project\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "Models\\Student.cs",
-              "ToolTip": "C:\\Github_Project\\Models\\Student.cs",
-              "RelativeToolTip": "Models\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Projects\\RestSoapAdapter\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Projects\\RestSoapAdapter\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T20:19:16.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginResultModel.cs",
-              "DocumentMoniker": "C:\\Github_Project\\Models\\LoginResultModel.cs",
-              "RelativeDocumentMoniker": "Models\\LoginResultModel.cs",
-              "ToolTip": "C:\\Github_Project\\Models\\LoginResultModel.cs",
-              "RelativeToolTip": "Models\\LoginResultModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T20:19:11.424Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Github_Project\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "Models\\LoginModel.cs",
-              "ToolTip": "C:\\Github_Project\\Models\\LoginModel.cs",
-              "RelativeToolTip": "Models\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T20:19:04.459Z"
+              "WhenOpened": "2024-06-20T20:19:25.414Z",
+              "EditorCaption": ""
             }
           ]
         }
