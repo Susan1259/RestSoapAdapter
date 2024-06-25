@@ -13,17 +13,18 @@ namespace MyApplication.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
+        private readonly SampleDBContext _context;
 
-        public AuthController(IConfiguration configuration)
+        public AuthController(IConfiguration configuration, SampleDBContext context)
         {
             _configuration = configuration;
+            _context = context;
         }
-
         private readonly List<User> _users = new List<User>
         {
             new User
             {
-                Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test",
+                ID = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test",
                 Roles = new List<string>(){
                     "Create",
                     "Update",
@@ -33,7 +34,7 @@ namespace MyApplication.Controllers
             },
             new User
             {
-                Id = 2, FirstName = "Test2", LastName = "User2", Username = "test2", Password = "test2",
+                ID = 2, FirstName = "Test2", LastName = "User2", Username = "test2", Password = "test2",
                 Roles = new List < string >() 
                 {
                     "Create",
@@ -43,7 +44,7 @@ namespace MyApplication.Controllers
             },
             new User
             {
-                Id = 3, FirstName = "Test3", LastName = "User3", Username = "test3", Password = "test3",
+                ID = 3, FirstName = "Test3", LastName = "User3", Username = "test3", Password = "test3",
                 Roles = new List < string >() 
                 { 
                     "Delete"
@@ -55,6 +56,7 @@ namespace MyApplication.Controllers
         public ActionResult<LoginResultModel> Login(LoginModel model)
         {
             var user = _users.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
+            
             if (user == null)
             {
                 return NotFound(new
@@ -62,11 +64,12 @@ namespace MyApplication.Controllers
                     message = "Username or password is not correct"
                 });
             }
-
+            _context.User.Add(user);
+            _context.SaveChanges();
             var token = GenerateJwtToken(user);
             return Ok(new LoginResultModel
             {
-                UserId = user.Id,
+                UserId = user.ID,
                 AuthToken = token
             });
         }
@@ -78,7 +81,7 @@ namespace MyApplication.Controllers
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()),
                 new Claim(ClaimTypes.Name, user.FirstName),
                 
             };
@@ -95,16 +98,5 @@ namespace MyApplication.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
-    }
-
-    public class User
-    {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-
-        public List<string> Roles = new();
     }
 }

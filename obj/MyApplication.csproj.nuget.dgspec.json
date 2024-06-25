@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\RestSoapAdapter\\MyApplication.csproj": {}
+    "C:\\Github_Project\\RestSoapAdapter\\MyApplication.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\RestSoapAdapter\\MyApplication.csproj": {
+    "C:\\Github_Project\\RestSoapAdapter\\MyApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\RestSoapAdapter\\MyApplication.csproj",
+        "projectUniqueName": "C:\\Github_Project\\RestSoapAdapter\\MyApplication.csproj",
         "projectName": "MyApplication",
-        "projectPath": "C:\\Projects\\RestSoapAdapter\\MyApplication.csproj",
-        "packagesPath": "C:\\Users\\susan\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\RestSoapAdapter\\obj\\",
+        "projectPath": "C:\\Github_Project\\RestSoapAdapter\\MyApplication.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Github_Project\\RestSoapAdapter\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\susan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,6 +54,12 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -92,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
