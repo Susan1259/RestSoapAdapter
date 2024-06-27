@@ -20,42 +20,12 @@ namespace MyApplication.Controllers
             _configuration = configuration;
             _context = context;
         }
-        private readonly List<User> _users = new List<User>
-        {
-            new User
-            {
-                ID = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test",
-                Roles = new List<string>(){
-                    "Create",
-                    "Update",
-                    "Admin",
-                    "Delete"
-                }
-            },
-            new User
-            {
-                ID = 2, FirstName = "Test2", LastName = "User2", Username = "test2", Password = "test2",
-                Roles = new List < string >() 
-                {
-                    "Create",
-                    "Get"
-                   
-                }
-            },
-            new User
-            {
-                ID = 3, FirstName = "Test3", LastName = "User3", Username = "test3", Password = "test3",
-                Roles = new List < string >() 
-                { 
-                    "Delete"
-                }
-            }
-        };
+        
 
         [HttpPost]
         public ActionResult<LoginResultModel> Login(LoginModel model)
         {
-            var user = _users.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
+            var user = _context.Users.FirstOrDefault(u => u.Username == model.Username && u.Password == model.Password);
             
             if (user == null)
             {
@@ -64,16 +34,37 @@ namespace MyApplication.Controllers
                     message = "Username or password is not correct"
                 });
             }
-            _context.User.Add(user);
+            _context.Users.Add(user);
             _context.SaveChanges();
             var token = GenerateJwtToken(user);
             return Ok(new LoginResultModel
             {
-                UserId = user.ID,
+                UserId = user.UserId,
                 AuthToken = token
             });
         }
+        [HttpPost("register")]
+        public ActionResult Register(UserRegisterModel model)
+        {
+            // Check if username is already taken
+            if (_context.Users.Any(u => u.Username == model.Username))
+            {
+                return BadRequest(new { message = "Username is already taken" });
+            }
 
+            // Create new user entity
+            var newUser = new User
+            {
+                Username = model.Username,
+                Password = model.Password,
+                UserRoles = model.RoleIds.Select(roleId => new UserRole { RoleId = roleId }).ToList()
+            };
+
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
+
+            return Ok(new { message = "User registered successfully" });
+        }
         private string GenerateJwtToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -81,11 +72,11 @@ namespace MyApplication.Controllers
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()),
-                new Claim(ClaimTypes.Name, user.FirstName),
-                
+                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+                new Claim(ClaimTypes.Name, user.Username),
+
             };
-            claims.AddRange(user.Roles.Select(role => new Claim(ClaimTypes.Role, role)));
+            claims.AddRange(user.UserRoles.Select(ur => new Claim(ClaimTypes.Role, ur.Role.RoleName)));
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
